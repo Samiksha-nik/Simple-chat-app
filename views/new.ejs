@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write new chat</title>
+    <style>
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef6f9;
+    color: #333;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 26px;
+    color: #2b6777;
+    margin-bottom: 30px;
+}
+
+form {
+    background: #ffffff;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="text"],
+textarea {
+    font-size: 16px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s ease;
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #2b6777;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button {
+    background-color: #2b6777;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #18606e;
+}
+
+    </style>
+</head>
+<body>
+    <h3>Write new chat</h3>
+    <form method="post" action="/chats">
+        <input type="text" placeholder="who are you" name="from">
+        <textarea name="msg" placeholder="write your message here"></textarea>
+        <input type="text" placeholder="add receiver" name="to">
+        <button>Create chat</button>
+    </form>
+</body>
+</html>
